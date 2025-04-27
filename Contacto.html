@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - MoviZone</title>
+  <link rel="stylesheet" href="MovilSA.css">
+  <link rel="icon" href="Icono movil/Icono movil.png">
+</head>
+<body>
+  <header>
+    <h1>MoviZone</h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="MovilSA.html" class="activo">Inicio</a></li>
+        <li class="submenu"><a href="#" class="activo">Gamas</a>
+          <ul>
+            <li><a href="Gama alta.html">Alta</a></li>
+            <li><a href="Gama media.html">Media</a></li>
+            <li><a href="Gama baja.html">Baja</a></li>
+          </ul>
+        </li>
+        <li><a href="Quienes Somos.html" class="activo">Quiénes somos</a></li>
+        <li><a href="Contacto.html" class="activo">Contacto</a></li>
+        
+    </nav>
+  </header>
+
+  <main class="contacto">
+    <h2>Contáctanos</h2>
+    <form action="#" method="post">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono">
+
+      <label for="fecha">Fecha de contacto:</label>
+      <input type="date" id="fecha" name="fecha">
+
+      <label for="motivo">Motivo:</label>
+      <select id="motivo" name="motivo">
+        <option value="consulta">Consulta general</option>
+        <option value="soporte">Soporte técnico</option>
+        <option value="venta">Venta y presupuestos</option>
+      </select>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+
+      <label>
+        <input type="checkbox" name="acepta" required>
+        Acepto la política de privacidad
+      </label>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MoviZone. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
+
+
