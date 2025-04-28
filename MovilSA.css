@@ -7,39 +7,39 @@
 
 /* ==== Estilos globales del cuerpo de la web ==== */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: url(img/fondo.png);
+  font-family: Arial, sans-serif; /* Fuente principal */
+  line-height: 1.6; /* Espaciado entre líneas */
+  background: url(img/fondo.png); /* Imagen de fondo */
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  color: #333;
+  background-attachment: fixed; /* Fondo fijo al hacer scroll */
+  background-size: 100% 100%; /* Escalar la imagen al tamaño del navegador */
+  color: #333; /* Color de texto general */
 }
 
 /* ==== Estilos del encabezado (header) ==== */
 header {
-  background-color: #2c3e50;
-  color: white;
-  padding: 1em;
-  text-align: center;
+  background-color: #2c3e50; /* Color de fondo oscuro */
+  color: white; /* Texto blanco */
+  padding: 1em; /* Espaciado interno */
+  text-align: center; /* Centrar texto */
 }
 
 /* ==== Estilos generales para títulos h1 ==== */
 h1 {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.5em; /* Separación inferior */
 }
 
 /* ==== Menú de navegación ==== */
 nav ul.menu {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-  flex-wrap: wrap;
+  list-style: none; /* Quitar viñetas */
+  display: flex; /* Mostrar elementos en línea */
+  justify-content: center; /* Centrar elementos */
+  gap: 1em; /* Espacio entre ellos */
+  flex-wrap: wrap; /* Permitir salto de línea en pantallas pequeñas */
 }
 
 nav ul.menu > li {
-  position: relative;
+  position: relative; /* Para posicionar el submenú */
 }
 
 nav ul.menu a {
@@ -49,6 +49,7 @@ nav ul.menu a {
   display: block;
 }
 
+/* ==== Estilo para el enlace activo en el menú ==== */
 nav ul.menu a.activo {
   background-color: #1abc9c;
   border-radius: 5px;
@@ -60,22 +61,24 @@ nav ul.menu a.activo {
   position: absolute;
   background-color: #34495e;
   list-style: none;
-  top: 100%;
+  top: 100%; /* Posicionar debajo del elemento padre */
   left: 0;
   min-width: 150px;
 }
 
+/* ==== Mostrar submenú al pasar el ratón ==== */
 .submenu:hover ul {
   display: block;
 }
 
+/* ==== Efecto hover en los submenús ==== */
 .submenu ul li a:hover {
   background-color: #1abc9c;
 }
 
 /* ==== Sección principal de bienvenida (hero) ==== */
 .hero {
-  background: linear-gradient(to right, #1abc9c, #16a085);
+  background: linear-gradient(to right, #1abc9c, #16a085); /* Degradado */
   color: white;
   text-align: center;
   padding: 4em 1em;
@@ -89,20 +92,54 @@ nav ul.menu a.activo {
   flex-wrap: nowrap;
   gap: 30px;
   padding: 2em;
-  overflow-x: auto;
+  overflow-x: auto; /* Permite scroll horizontal en pantallas pequeñas */
 }
 
-/* ==== Tarjeta individual de cada gama ==== */
-.gama {
+/* ==== Detalle de gama de productos ==== */
+.gama-detalle {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2em;
+}
+
+/* ==== Título principal del detalle ==== */
+.gama-detalle h2 {
+  text-align: center;
+  margin-bottom: 2em;
+  color: #2c3e50;
+}
+
+/* ==== Contenedor de productos individuales ==== */
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+}
+
+/* ==== Tarjeta individual de producto ==== */
+.producto {
   background-color: white;
   border-radius: 10px;
   padding: 1em;
-  width: 300px;
+  width: 280px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.gama a {
+/* ==== Imagen del producto ==== */
+.producto img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 1em;
+}
+
+/* ==== Botón para ver el producto ==== */
+.producto a {
   display: inline-block;
   margin-top: 1em;
   background-color: #2c3e50;
@@ -127,6 +164,7 @@ nav ul.menu a.activo {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+/* ==== Títulos y párrafos en presentación ==== */
 .presentacion h2 {
   margin-bottom: 1em;
   color: #2c3e50;
@@ -146,12 +184,14 @@ nav ul.menu a.activo {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+/* ==== Título del formulario ==== */
 .contacto h2 {
   text-align: center;
   margin-bottom: 1em;
   color: #2c3e50;
 }
 
+/* ==== Estructura del formulario ==== */
 .contacto form {
   display: flex;
   flex-direction: column;
@@ -162,6 +202,7 @@ nav ul.menu a.activo {
   font-weight: bold;
 }
 
+/* ==== Estilos comunes para inputs, selects y textarea ==== */
 .contacto input,
 .contacto select,
 .contacto textarea,
@@ -171,6 +212,7 @@ nav ul.menu a.activo {
   border: 1px solid #ccc;
 }
 
+/* ==== Botón de enviar formulario ==== */
 .contacto button {
   background-color: #1abc9c;
   color: white;
@@ -180,55 +222,6 @@ nav ul.menu a.activo {
 
 .contacto button:hover {
   background-color: #16a085;
-}
-
-/* ==== Detalle de gama de productos ==== */
-.gama-detalle {
-  max-width: 1000px;
-  margin: auto;
-  padding: 2em;
-}
-
-.gama-detalle h2 {
-  text-align: center;
-  margin-bottom: 2em;
-  color: #2c3e50;
-}
-
-.productos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2em;
-  justify-content: center;
-}
-
-.producto {
-  background-color: white;
-  border-radius: 10px;
-  padding: 1em;
-  width: 280px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.producto img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-  margin-bottom: 1em;
-}
-
-.producto a {
-  display: inline-block;
-  margin-top: 1em;
-  background-color: #2c3e50;
-  color: white;
-  padding: 0.5em 1em;
-  text-decoration: none;
-  border-radius: 5px;
 }
 
 /* ==== Pie de página ==== */
@@ -254,18 +247,21 @@ footer {
   text-align: center;
 }
 
+/* ==== Títulos de formularios ==== */
 .log-contenedor h1, .reg-contenedor h1 {
   font-size: 2em;
   margin-bottom: 1.5em;
   color: #2c3e50;
 }
 
+/* ==== Formulario interno de login y registro ==== */
 .formulario-login, .formulario-registro {
   display: flex;
   flex-direction: column;
   gap: 1.2em;
 }
 
+/* ==== Input con efecto de focus ==== */
 .grupo-input input {
   width: 100%;
   padding: 0.8em;
@@ -280,6 +276,7 @@ footer {
   outline: none;
 }
 
+/* ==== Botón bonito y animado ==== */
 .boton {
   display: inline-block;
   padding: 0.8em;
@@ -299,6 +296,7 @@ footer {
   transform: scale(1.05);
 }
 
+/* ==== Pie de los formularios ==== */
 .pie-formulario {
   margin-top: 1.5em;
   font-size: 0.9em;
@@ -324,6 +322,7 @@ footer {
   background-size: cover;
 }
 
+/* ==== Contenedor de tarjetas ==== */
 .cards-container {
   display: flex;
   justify-content: center;
@@ -333,19 +332,22 @@ footer {
   padding: 2em;
 }
 
+/* ==== Tarjeta animada 3D ==== */
 .card {
   width: 400px;
   height: 400px;
-  perspective: 1000px;
+  perspective: 1000px; /* Profundidad para efecto 3D */
   position: relative;
 }
 
+/* ==== Logo dentro de la tarjeta ==== */
 .MZ-logo {
   width: 100%;
   height: 100%;
   padding: 0%;
 }
 
+/* ==== Caras de la tarjeta ==== */
 .card .face {
   width: 100%;
   height: 100%;
@@ -363,6 +365,7 @@ footer {
   background-color: white;
 }
 
+/* ==== Cara frontal de la tarjeta ==== */
 .card .front {
   z-index: 2;
 }
@@ -374,10 +377,12 @@ footer {
   object-fit: cover;
 }
 
+/* ==== Cara trasera de la tarjeta (gira 180º) ==== */
 .card .back {
   transform: rotateY(180deg);
 }
 
+/* ==== Animación de rotación al hacer hover ==== */
 .card:hover .front {
   transform: rotateY(180deg);
 }
@@ -411,63 +416,13 @@ footer {
   .gama, .producto {
     width: 90%;
   }
+
   .log-contenedor, .reg-contenedor {
     margin: 60px 20px;
     padding: 1.5em;
   }
 }
 
-/* ==== Media queries adicionales para mejorar aún más el responsive ==== */
-@media (max-width: 1024px) {
-  .gamas {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .card {
-    width: 300px;
-    height: 300px;
-  }
-}
-
-@media (max-width: 600px) {
-  header, footer {
-    padding: 0.8em;
-  }
-  .hero {
-    font-size: 0.9em;
-    padding: 2em 1em;
-  }
-  .cards-container {
-    flex-direction: column;
-    padding: 1em;
-    gap: 1em;
-  }
-  .card {
-    width: 90%;
-    height: 250px;
-  }
-  .contacto, .quienes, .gama-detalle {
-    padding: 1em;
-  }
-  nav ul.menu a {
-    padding: 0.5em;
-  }
-}
-
-@media (max-width: 360px) {
-  .gama, .producto {
-    width: 100%;
-    padding: 0.5em;
-  }
-  .log-contenedor, .reg-contenedor {
-    margin: 40px 10px;
-    padding: 1em;
-  }
-  .boton {
-    font-size: 1em;
-    padding: 0.6em;
-  }
-}
 
 
 
